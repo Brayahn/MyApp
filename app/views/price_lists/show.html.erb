@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @price_list.vendor %></h1>
+ </br>
+  <p class="lead"><%= @price_list.product %> |   <%= @price_list.price %></p>
+ </br></br>
+
+ 
+  <%= link_to 'Edit', edit_price_list_path(@price_list), class:"btn btn-secondary" %> 
+<%= link_to 'Back', price_lists_path , class:"btn btn-dark"%>
+
+</div>
+
