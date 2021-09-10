@@ -6,6 +6,6 @@ class CreatePriceLists < ActiveRecord::Migration[6.1]
       t.decimal :price, precision: 8, scale: 2 
 
       t.timestamps
-    end
-  end
-end
+    end    
+  end    
+end    
