@@ -19,8 +19,13 @@
   </head>
   <body>
 
-  <%= render 'home/header' %>
+  <% if devise_controller? %>
+    BTN
+  <%else%>
   
+  <%= render 'home/header' %>
+  <%end%>
+
   <div class="container">
   <% if notice %>
   <%= render 'layouts/alerts'%> 

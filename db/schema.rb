@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_140304) do
+ActiveRecord::Schema.define(version: 2021_09_10_183214) do
+
+  create_table "dealers", force: :cascade do |t|
+    t.string "title"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "company_name"
+    t.string "display_name"
+    t.string "email"
+    t.string "phone"
+    t.string "work_phone"
+    t.string "website"
+    t.text "billing_address"
+    t.text "shipping_address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "sku"
+    t.string "unit"
+    t.string "manufucturer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "price_lists", force: :cascade do |t|
     t.string "vendor"

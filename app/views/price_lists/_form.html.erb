@@ -11,15 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field form-group">
-    <%= form.label :vendor%>
-    <%= form.text_field :vendor, class:"form-control" %>
-  </div>
+  <div class="field  form-group"> 
+  <%= form.label :vendor %> 
+    <%= form.collection_select :vendor, Dealer.all, :display_name, :display_name, {}, {:prompt => '-- Select a Product --', class:"form-control" } %>
+  </div> 
 
-  <div class="field form-group">
-    <%= form.label :product %>
-    <%= form.text_field :product, class:"form-control" %>
-  </div>
+
+
+   <div class="field  form-group"> 
+  <%= form.label :product %> 
+    <%= form.collection_select :product, Item.all, :name, :name, {}, {:prompt => '-- Select a Product --', class:"form-control" } %>
+  </div>  
 
   <div class="field form-group">
     <%= form.label :price %>
