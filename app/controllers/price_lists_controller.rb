@@ -51,7 +51,7 @@ class PriceListsController < ApplicationController
   def destroy
     @price_list.destroy
     respond_to do |format|
-      format.html { redirect_to price_lists_url, notice: "Price list was successfully destroyed." }
+      format.html { redirect_to price_lists_url, notice: "Price list was successfully deleted." }
       format.json { head :no_content }
     end
   end

@@ -51,7 +51,7 @@ class DealersController < ApplicationController
   def destroy
     @dealer.destroy
     respond_to do |format|
-      format.html { redirect_to dealers_url, notice: "Dealer was successfully destroyed." }
+      format.html { redirect_to dealers_url, notice: "Dealer was successfully Deleted." }
       format.json { head :no_content }
     end
   end
