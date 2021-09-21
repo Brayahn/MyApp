@@ -1,59 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @dealer.title %>
-</p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @dealer.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @dealer.last_name %>
-</p>
-
-<p>
-  <strong>Company name:</strong>
-  <%= @dealer.company_name %>
-</p>
-
-<p>
-  <strong>Display name:</strong>
-  <%= @dealer.display_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @dealer.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @dealer.phone %>
-</p>
-
-<p>
-  <strong>Work phone:</strong>
-  <%= @dealer.work_phone %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @dealer.website %>
-</p>
-
-<p>
-  <strong>Billing address:</strong>
-  <%= @dealer.billing_address %>
-</p>
-
-<p>
-  <strong>Shipping address:</strong>
-  <%= @dealer.shipping_address %>
-</p>
 
 <%= link_to 'Edit', edit_dealer_path(@dealer) %> |
 <%= link_to 'Back', dealers_path %>
+
+
+
+
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4">  <%= @dealer.title %>  <%= @dealer.first_name %>  <%= @dealer.last_name %> </h1>
+ </br>
+  <p class="lead">   <%= @dealer.company_name %>  | <%= @dealer.email %>  |   <%= @dealer.phone %> |  </p>
+  <p class="lead">   <%= @dealer.billing_address %>  | <%= @dealer.email %>  |    <%= @dealer.shipping_address %> |  </p>
+  </br></br>
+ 
+  <%= link_to 'Edit', edit_dealer_path(@dealer), class:"btn btn-secondary" %> 
+<%= link_to 'Back', dealers_path , class:"btn btn-dark"%>
+</div>
