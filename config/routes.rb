@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'inventory/index'
   resources :items
   resources :dealers
   devise_for :users
